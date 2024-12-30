@@ -34,6 +34,12 @@ Response: Include the username from the URL in the response, such as “Hello th
 
 */
 
+app.get('/', (req, res) => {
+  const name = "Ali"
+  res.send(`Hello there, ${name}!`)
+})
+
+
 app.get('/greetings/:name', (req, res) => {
     const name = req.params.name
     res.send(`Hello there, ${name}!`)
